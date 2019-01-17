@@ -9,25 +9,36 @@
 </head>
 <body>
 <?php
-echo "Объяснить, как работает данный код:  </br>";
-?>
-<?php
-$a = 5;
-$b = '05';
-    echo "var_dump($a == $b) = ";
-var_dump($b == $a); // Почему true?
-    echo "// Почему true? Потому что это сравнение по значению строка '05' не явно приводится к числу 5 <br>";
-    echo "var_dump((int)'012345') = ";
-var_dump((int)'012345');                        // Почему 12345?
-    echo "// Почему 12345? Потому что строка '012345' явно приводится к целому числу 12345 <br>";
-    echo "var_dump((float)123.0 === (int)123.0) = ";
-var_dump((float)123.0 === (int)123.0); // Почему false?
-    echo "// Почему false? Потому что тут идет сравнение типов данных число с плавающей точкой не 
-равно целому числу. <br>";
-    echo "var_dump((int)0 === (int)'hello, world') = ";
-var_dump((int)0 === (int)'hello, world'); // Почему true?
-    echo "// Почему true? Потому что тут идет явное приведение к целому числу 'hello, world' 
-определяется как 0 и типы данных тоже равны.";
+$a = rand(0, 15);
+$b = rand(0, 15);
+echo "$a <br>";
+echo "$b <br>";
+
+function sum($a, $b) {
+    return $a + $b;
+}
+
+function subtraction($a, $b) {
+    return $a - $b;
+}
+
+function increase($a, $b) {
+    return $a * $b;
+}
+
+function division($a, $b) {
+    if ($b == 0) {
+        return "Бесконечность";
+    } else {
+        return $a / $b;
+    }
+}
+
+echo sum($a, $b) . " - результат суммы<br>";
+echo subtraction($a, $b) . " - результат разницы<br>";
+echo increase($a, $b) . " - результат умножения<br>";
+echo division($a, $b) . " - результат деления<br>";
+
 ?>
 
 </body>
