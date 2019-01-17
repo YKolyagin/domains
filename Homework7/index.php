@@ -32,11 +32,7 @@
                 } else {
                     echo date('H') . " часов ";
                 }
-                if (date('i') % 10 == 1 ||
-                    date('i') == 21 ||
-                    date('i') == 31 ||
-                    date('i') == 41 ||
-                    date('i') == 11) {
+                if (date('i') % 10 == 1 && date('i') != 11) {
                     echo date('i') . " минута";
                 } elseif (date('i') % 10 == 2 ||
                     date('i') % 10 == 3 ||
