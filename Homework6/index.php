@@ -15,7 +15,26 @@
 </header>
 <div>
     <div style="height: 400px; width: 100%; background: burlywood; margin: 0; padding: 0; text-align: center">
-        <h1 style="margin: 0">Контент</h1>
+        <p style="margin: 0">
+            <?php
+            $val = 2;
+            $pow = 5;
+            echo "$val";
+            echo "<sup>$pow</sup> = ";
+
+            function power($val, $pow) {
+                define('CONST_VAL', "$val");
+                $result = $val * CONST_VAL;
+                if ($pow >= 3) {
+                    $pow--;
+                    $result = power($result, $pow);
+                }
+                return $result;
+            }
+
+            echo power($val, $pow);
+            ?>
+        </p>
     </div>
 </div>
 <footer>
