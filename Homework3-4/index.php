@@ -27,6 +27,53 @@
             color: red;
             font-size: 16px;
         }
+
+
+        .fullImg {
+            width: 1140px;
+            height: 800px;
+        }
+
+        .clear {
+            display: block;
+            background-color: grey;
+            height: 22px;
+            width: 60px;
+            text-align: center;
+            padding: 5px 10px 5px 10px;
+            text-decoration: none;
+            color: black;
+            position: absolute;
+            top: 34px;
+        }
+
+        .view {
+            display: block;
+            background-color: grey;
+            height: 22px;
+            width: 100px;
+            text-align: center;
+            padding: 5px 10px 5px 10px;
+            text-decoration: none;
+            color: black;
+            position: absolute;
+            margin-top: -41px;
+            margin-left: 5px;
+        }
+
+        .viewShow {
+            display: block;
+            background-color: grey;
+            height: 22px;
+            width: 100px;
+            text-align: center;
+            padding: 5px 10px 5px 10px;
+            text-decoration: none;
+            color: black;
+            position: absolute;
+            margin-top: 5px;
+            margin-left: -510px;
+        }
     </style>
     <title>Document</title>
 </head>
@@ -46,6 +93,7 @@ include "photo.php";
 </div>
 <div><?php
     echo $linkPhoto;
+    echo $clear;
     ?>
 </div>
 <?php
